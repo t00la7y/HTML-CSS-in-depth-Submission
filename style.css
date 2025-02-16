@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', serif;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f8ff; /* AliceBlue */
+}
+
+#home h1 {
+    padding-top: 5px;
+    color: #2c3e50; /* Midnight Blue */
+}
+
+.nav-links {
+    position: fixed;
+    top: 111px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #3498db; /* Peter River */
+    padding: 10px 0;
+    transition: top 0.3s;
+}
+
+.nav-links.nav-up {
+    top: -9px; /* Adjust this value based on your nav height */
+}
+
+.nav-links.nav-down {
+    top: 9;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ecf0f1; /* Clouds */
+}
+
+.copyright {
+    background-color: #95a5a6; /* Concrete */
+    color: #ecf0f1; /* Clouds */
+    text-align: center;
+    padding: 10px 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+}
+
+.container .item {
+    background-color: #8e44ad; /* Wisteria */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container .item .photo {
+    width: 100%;
+    height: 100%;
+}
+
+.container .item .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    .container .item {
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .container .item .photo {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .container .item .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .container .item .writing {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        background-color: #ecf0f1; /* Clouds */
+        color: #2c3e50; /* Midnight Blue */
+    }
+}
+
+@media (min-width: 768px) {
+    .container .item {
+        flex-direction: row;
+        border-radius: 10px;
+    }
+
+    .container .item .photo {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .container .item .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .container .item .writing {
+        width: 60%;
+        height: auto;
+        padding-left: 30px;
+        background-color: #ecf0f1; /* Clouds */
+        color: #2c3e50; /* Midnight Blue */
+    }
+}

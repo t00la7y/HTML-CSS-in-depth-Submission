@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="describtion" content="Easy Mug cake Recipes">
+    <meta name="keywords" content="Mug Cake, Cake, Mug, Recipes">
+    <meta name="author" content="Mpilo Shezi">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>Mug Cakes</title>    
+</head>
+<body>
+    <header>
+        <div id="home">
+            <h1 style="font-size: 50px;">Mug Cakes</h1><br>
+            <h2>Easy Bakes</h2>
+        </div>
+        <div class="nav-links">
+            <ul><a href="#home">Home</a></ul>
+            <ul><a href="#recipes">Recipes</a></ul>
+            <ul><a href="#about">About</a></ul>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="item">
+                <div class="photo">
+                    <img src="Images/Brownie Mug Cake.jpg" id="image">
+                </div>
+            </div>
+            <div class="item">
+                <div class="photo">
+                    <img src="Images/Lemon Berry Mug Cake.jpg" id="image">
+                </div>
+            </div>
+            <div class="item">
+                <div class="photo">
+                    <img src="Images/Oreo Mug Cake.jpg" id="image">
+                </div>
+            </div>
+            <div class="item">
+                <div class="photo">
+                    <img src="Images/Peanut Butter Mug Cake.jpg" id="image">
+                </div>
+            </div>
+            <div class="item">
+                <div class="photo">
+                    <img src="Images/Strawberry Mug Cake.jpg" id="image">
+                </div>
+            </div>
+            <div class="item">
+                <div class="photo">
+                    <img src="Images/Vanilla Mug Cake.jpg" id="image">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="copyright">
+            copyright
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let lastScrollTop = 0;
+            const nav = document.querySelector('.nav-links');
+    
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    // Scroll down
+                    nav.classList.add('nav-up');
+                    nav.classList.remove('nav-down');
+                } else {
+                    // Scroll up
+                    nav.classList.add('nav-down');
+                    nav.classList.remove('nav-up');
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+            });
+        });
+    </script>
+</body>
+</html>
